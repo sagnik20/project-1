@@ -24,10 +24,15 @@ public class BookingStatus {
 	@Column(nullable= false)
 	private String status;
 	
+	/**
+	 * @param bId
+	 * @param status
+	 */
 	public BookingStatus(Integer bId, String status) {
 		this.bId = bId;
 		this.status = status;
 	}
+	
 
 	@Override
 	public int hashCode() {

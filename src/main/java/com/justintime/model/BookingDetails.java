@@ -26,7 +26,7 @@ public class BookingDetails {
 	
 	@OneToOne(cascade=CascadeType.ALL,targetEntity=Cab.class)
 	@JoinColumn(name="cabNo")
-	private Cab cab;
+	private Cab cabNo;
 	
 	@OneToOne(cascade=CascadeType.ALL,targetEntity=Employee.class)
 	@JoinColumn(name="id")
@@ -55,7 +55,7 @@ public class BookingDetails {
 	}
 
 	public Cab getCabNo() {
-		return cab;
+		return cabNo;
 	}
 
 	public Employee getEmplpoyeeId() {
@@ -67,7 +67,7 @@ public class BookingDetails {
 	}
 
 	public void setCabNo(Cab cabNo) {
-		this.cab = cab;
+		this.cabNo = cabNo;
 	}
 
 	public void setEmplpoyeeId(Employee emp) {

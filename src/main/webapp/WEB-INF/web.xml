@@ -10,14 +10,14 @@
   	<servlet-name>CabBooking</servlet-name>
   	<display-name>CabBooking</display-name>
   	<description></description>
-  	<servlet-class>com.justintime.client.CabBooking</servlet-class>
+  	<servlet-class>com.justintime.service.CabBooking</servlet-class>
   </servlet>
   <servlet>
   	<description>
   	</description>
   	<display-name>BookingHistory</display-name>
   	<servlet-name>BookingHistory</servlet-name>
-  	<servlet-class>com.justintime.client.BookingHistory</servlet-class>
+  	<servlet-class>com.justintime.service.BookingHistory</servlet-class>
   </servlet>
   <servlet>
   	<description>
