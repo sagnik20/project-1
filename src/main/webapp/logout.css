@@ -13,6 +13,7 @@
 
 .nav-color {
     background-image: linear-gradient(to bottom, #355f75, #427d94, #509cb2, #60bdcf, #72deea);
+	height:80px;
 }
 
 .bg-container {
@@ -21,7 +22,7 @@
 }
 
 .btns {
-    margin-top: 12px;
+    margin-top: 10px;
     color: #ffffff;
     background-color: transparent;
     border-width: 0px;
