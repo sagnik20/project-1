@@ -14,26 +14,38 @@ Here goes your awesome project description!
 ## Technologies Used
 
 * Java - version 1.8
-* Hibernate - version 5.4.0
-* MySQL - version 8.0
+* Hibernate - version 4.3.6.Final
+* Maven War Plugin - version 3.3.1
+* Apache Tomcat - version 9.0.58
 * Log 4j - version 1.2.17
 * JUnit - version 4
+* HTML - version 5
+* CSS - version 3
+* Bootstrap - version 4
+* MySQL Connector Java - version 8.0.25
 
 ## Features
 
 List of features ready and TODOs for future development
-* Awesome feature 1
-* Awesome feature 2
-* Awesome feature 3
+* Adding New Employee by Admin
+* Putting a cab Request by Employee
+* See previous booking history of an Employee
 
 To-do list:
-* Wow improvement to be done 1
-* Wow improvement to be done 2
+* Logout
+* Manager functionalities
+* Designing the frontend of most of the pages.  
 
 ## Getting Started
    
-(include git clone command)
-(include all environment setup steps)
+> Clone this Project using below command
+
+```
+git clone https://github.com/sagnik20/project-1.git
+```
+Incase it doesn't work then make sure you have Git installed. If not then install it from [official website](https://git-scm.com/downloads)
+> Open this in Eclipse 
+
 
 > Be sure to include BOTH Windows and Unix command  
 > Be sure to mention if the commands only work on a specific platform (eg. AWS, GCP)
