@@ -30,9 +30,9 @@ List of features ready and TODOs for future development
 * Adding New Employee by Admin
 * Putting a cab Request by Employee
 * See previous booking history of an Employee
+* Logout based on each 
 
 To-do list:
-* Logout
 * Manager functionalities
 * Designing the frontend of most of the pages.  
 

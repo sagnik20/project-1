@@ -30,7 +30,7 @@ public class BookingHistory extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		out.println("Here is Employee Booking History");
 		
-		HttpSession s=request.getSession(true);
+		HttpSession s=request.getSession(false);
 		String email = (String) s.getAttribute("email");
 		String pass = (String) s.getAttribute("pass");
 		BookingHistoryDao bh = new BookingHistoryDaoImpl();

@@ -40,6 +40,20 @@
   	<servlet-name>CabNotAvailable</servlet-name>
   	<servlet-class>com.justintime.exception.CabNotAvailable</servlet-class>
   </servlet>
+  <servlet>
+  	<description>
+  	</description>
+  	<display-name>logout</display-name>
+  	<servlet-name>logout</servlet-name>
+  	<servlet-class>com.justintime.service.logout</servlet-class>
+  </servlet>
+  <servlet>
+  	<description>
+  	</description>
+  	<display-name>PendingRequest</display-name>
+  	<servlet-name>PendingRequest</servlet-name>
+  	<servlet-class>com.justintime.service.PendingRequest</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>login</servlet-name>
   	<url-pattern>/rose</url-pattern>
@@ -63,5 +77,13 @@
   <servlet-mapping>
   	<servlet-name>CabNotAvailable</servlet-name>
   	<url-pattern>/CabNotAvailable</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>logout</servlet-name>
+  	<url-pattern>/logout</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>PendingRequest</servlet-name>
+  	<url-pattern>/PendingRequest</url-pattern>
   </servlet-mapping>
 </web-app>

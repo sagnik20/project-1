@@ -13,9 +13,10 @@ import com.justintime.model.Cab;
 public class CabRegistrationImpl implements CabRegister{
 
 	public boolean register(Cab c) {
+		Transaction tx=null;
 		try {
 			Session session = HibernateCon.getSession().openSession();
-			Transaction tx = session.beginTransaction();
+			tx = session.beginTransaction();
 			
 			session.save(c);
 			
@@ -23,7 +24,8 @@ public class CabRegistrationImpl implements CabRegister{
 			session.close();
 			
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+			if(tx!=null)
+				tx.rollback();
 			e.printStackTrace();
 			return false;
 		}
