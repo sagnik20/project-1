@@ -20,7 +20,7 @@ public class Cab {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable= false)
-	private final Integer cabNo;
+	private  Integer cabNo;
 	@Column(nullable= false)
 	private Integer status;
 	@Column(nullable= false)
@@ -35,6 +35,8 @@ public class Cab {
 		this.dName = dname;
 		this.dMobile = dmobile;
 	}
+	
+	public Cab() {}
 
 
 	public Integer getCabNo() {

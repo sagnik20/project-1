@@ -55,6 +55,8 @@ public class Request {
 		this.bId = bId;
 	}
 
+	public Request() {}
+
 	public Integer getRequestId() {
 		return requestId;
 	}
@@ -69,6 +71,22 @@ public class Request {
 
 	public BookingStatus getbId() {
 		return bId;
+	}
+
+	public void setRequestId(Integer requestId) {
+		this.requestId = requestId;
+	}
+
+	public void setEmp(Employee emp) {
+		this.emp = emp;
+	}
+
+	public void setBookingId(BookingDetails bookingId) {
+		this.bookingId = bookingId;
+	}
+
+	public void setbId(BookingStatus bId) {
+		this.bId = bId;
 	}
 	
 	

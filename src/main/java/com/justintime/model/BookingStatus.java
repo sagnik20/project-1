@@ -33,6 +33,8 @@ public class BookingStatus {
 		this.status = status;
 	}
 	
+	public BookingStatus() {}
+	
 
 	@Override
 	public int hashCode() {

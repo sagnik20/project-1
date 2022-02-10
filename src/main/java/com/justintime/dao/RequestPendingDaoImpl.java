@@ -2,7 +2,8 @@ package com.justintime.dao;
 
 import java.util.List;
 
-import org.hibernate.Query;
+import org.hibernate.HibernateException;
+import org.hibernate.SQLQuery;
 import org.hibernate.Session;
 
 import com.justintime.db.HibernateCon;
@@ -15,12 +16,21 @@ import com.justintime.model.Request;
 public class RequestPendingDaoImpl implements RequestPendingDao {
 
 	@Override
-	public List<Request> cabRequest() {
+	public List cabRequest() {
 		Session session = HibernateCon.getSession().openSession();
-		Query q=session.createQuery("select * from Request r where r.bid= 1"); //HQL
-
-		List<Request> alist=q.list();
-		session.close();
+		List alist = null;
+		try {
+			SQLQuery q=session.createSQLQuery("select * from request as r where r.bid= 1"); //HQL
+			q.addEntity(Request.class);
+			alist = q.list();
+		} 
+		catch (HibernateException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		finally {
+			session.close();
+		}
 		return alist;
 	}
 

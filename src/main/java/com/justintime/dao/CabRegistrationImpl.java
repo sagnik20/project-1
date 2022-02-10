@@ -14,20 +14,22 @@ public class CabRegistrationImpl implements CabRegister{
 
 	public boolean register(Cab c) {
 		Transaction tx=null;
+		Session session = HibernateCon.getSession().openSession();
 		try {
-			Session session = HibernateCon.getSession().openSession();
 			tx = session.beginTransaction();
 			
 			session.save(c);
 			
 			tx.commit();
-			session.close();
 			
 		} catch (Exception e) {
 			if(tx!=null)
 				tx.rollback();
 			e.printStackTrace();
 			return false;
+		}
+		finally {
+			session.close();
 		}
 		return true;
 	}

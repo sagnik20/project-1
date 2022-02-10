@@ -33,6 +33,20 @@ public class BookingDetails {
 	private Employee emp;
 	
 
+	
+	/**
+	 * @param bookingId
+	 * @param cabNo
+	 * @param emp
+	 */
+	public BookingDetails(Integer bookingId, Cab cabNo, Employee emp) {
+		this.bookingId = bookingId;
+		this.cabNo = cabNo;
+		this.emp = emp;
+	}
+	
+	public BookingDetails() {}
+
 	@Override
 	public int hashCode() {
 		return Objects.hash(bookingId);
