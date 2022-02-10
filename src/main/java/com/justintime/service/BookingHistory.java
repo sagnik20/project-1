@@ -2,6 +2,7 @@ package com.justintime.service;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Iterator;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -34,7 +35,7 @@ public class BookingHistory extends HttpServlet {
 		String email = (String) s.getAttribute("email");
 		String pass = (String) s.getAttribute("pass");
 		BookingHistoryDao bh = new BookingHistoryDaoImpl();
-		List<BookingDetails> bd= bh.bookingHistory(email, pass);
+		List bd= bh.bookingHistory(email, pass);
 		
 		out.println("<!DOCTYPE html>\r\n"
 				+ "<html lang=\"en\">\r\n"
@@ -77,9 +78,10 @@ public class BookingHistory extends HttpServlet {
 				+ "            </tr>\r\n"
 				+ "        </thead>\r\n"
 				+ "        <tbody>");
-		for(BookingDetails b :bd) {
+		for(Iterator iterator = bd.iterator(); iterator.hasNext();) {
+			BookingDetails b = (BookingDetails) iterator.next();
 			out.println("            <tr>");
-			out.format("<td>%s</td>", b.getBookingId());
+			out.format("<td>"+b.getBookingId()+"</td>");
 			out.format("<td>%s</td>", b.getCabNo());
 			out.println("            <tr>");
 		}

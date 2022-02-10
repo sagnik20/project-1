@@ -9,6 +9,6 @@ import com.justintime.model.BookingDetails;
  *
  */
 public interface BookingHistoryDao {
-	List<BookingDetails> bookingHistory(String email,String pass);
+	List bookingHistory(String email,String pass);
 
 }
