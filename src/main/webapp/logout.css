@@ -12,7 +12,8 @@
 }
 
 .nav-color {
-    background-image: linear-gradient(to bottom, #355f75, #427d94, #509cb2, #60bdcf, #72deea);
+    background-color: #7ee8fa;
+	background-image: linear-gradient(315deg, #7ee8fa 0%, #80ff72 74%);
 	height:80px;
 }
 
@@ -32,7 +33,8 @@
 }
 
 .copyright-container {
-    background-image: linear-gradient(to bottom, #355f75, #427d94, #509cb2, #60bdcf, #72deea);
+    background-color: #7ee8fa;
+	background-image: linear-gradient(315deg, #7ee8fa 0%, #80ff72 74%);
     padding: 10px;
     position: relative;
 }

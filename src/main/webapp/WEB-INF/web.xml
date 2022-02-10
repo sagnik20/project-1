@@ -68,6 +68,13 @@
   	<servlet-name>reject</servlet-name>
   	<servlet-class>com.justintime.service.reject</servlet-class>
   </servlet>
+  <servlet>
+  	<description>
+  	</description>
+  	<display-name>Admin</display-name>
+  	<servlet-name>Admin</servlet-name>
+  	<servlet-class>com.justintime.client.Admin</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>login</servlet-name>
   	<url-pattern>/rose</url-pattern>
@@ -107,5 +114,9 @@
   <servlet-mapping>
   	<servlet-name>reject</servlet-name>
   	<url-pattern>/reject</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Admin</servlet-name>
+  	<url-pattern>/Admin</url-pattern>
   </servlet-mapping>
 </web-app>
