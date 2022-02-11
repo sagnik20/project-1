@@ -117,6 +117,9 @@ public class PendingRequest extends HttpServlet {
 				+ "\r\n"
 				+ "\r\n"
 				+ "    <div class=\"bg-container\">");
+		out.println("<form method=\"post\" action=\"Manager\" >\r\n"
+				+ "<button type=\"submit\" id=\"login-button\" >Return to home</button>\r\n"
+				+ "</form>");
 		out.println("<center>\r\n"
 				+ "    <table>\r\n"
 				+ "        <thead>\r\n"

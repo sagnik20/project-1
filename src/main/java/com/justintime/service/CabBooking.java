@@ -57,6 +57,9 @@ public class CabBooking extends HttpServlet {
 					+ "\r\n"
 					+ "\r\n"
 					+ "    <div class=\"bg-container\">");
+			out.println("<form method=\"post\" action=\"Employee\" >\r\n"
+					+ "<button type=\"submit\" id=\"login-button\" >Return to home</button>\r\n"
+					+ "</form>");
 			out.println("Welcome to Cab booking <br>");
 			out.println("Cab Requested successfully");
 			out.println("    </div>\r\n"
@@ -100,6 +103,9 @@ public class CabBooking extends HttpServlet {
 					+ "\r\n"
 					+ "\r\n"
 					+ "    <div class=\"bg-container\">");
+			out.println("<form method=\"post\" action=\"Employee\" >\r\n"
+					+ "<button type=\"submit\" id=\"login-button\" >Return to home</button>\r\n"
+					+ "</form>");
 			out.println("Welcome to Cab booking <br>");
 			out.println("Couldn't Request your Cab</br>Your previous request is still pending. <br>Contact your Manager");
 			out.println("    </div>\r\n"

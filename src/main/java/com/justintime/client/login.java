@@ -110,6 +110,9 @@ public class login extends HttpServlet {
 						+ "    <script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js\" integrity=\"sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN\" crossorigin=\"anonymous\"></script>\r\n"
 						+ "    <link rel=\"stylesheet\" href=\"logout.css\">\r\n"
 						+ "    <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js\" integrity=\"sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV\" crossorigin=\"anonymous\"></script>\r\n"
+						+ "<link rel=\"stylesheet\" href=\"manager.css\">"
+						+ "<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css\" />\r\n"
+						+ "<link href=\"https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap\" rel=\"stylesheet\" />\r\n"
 						+ "</head>\r\n"
 						+ "<body>");
 				out.println("<div class=\" d-flex justify-content-between nav-color\">\r\n"
@@ -123,7 +126,10 @@ public class login extends HttpServlet {
 						+ "    </div>"
 						+ "<div class=\"bg-container\">");
 				out.println("<form method=\"post\" action=\"PendingRequest\" >\r\n"
-						+ "<button type=\"submit\" id=\"login-button\" >Pending Request</button>\r\n"
+						+ "<button type=\"submit\" class=\"slide\">\r\n"
+						+ "  <div>Slide</div>\r\n"
+						+ "  <i class=\"icon-arrow-right\"></i>\r\n"
+						+ "</button>"
 						+ "</form>");
 				out.println("</div> \r\n"
 						+ "<div class=\"copyright-container\">\r\n"

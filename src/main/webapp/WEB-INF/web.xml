@@ -89,6 +89,20 @@
   	<servlet-name>Assign</servlet-name>
   	<servlet-class>com.justintime.service.Assign</servlet-class>
   </servlet>
+  <servlet>
+  	<description>
+  	</description>
+  	<display-name>Employee</display-name>
+  	<servlet-name>Employee</servlet-name>
+  	<servlet-class>com.justintime.client.Employee</servlet-class>
+  </servlet>
+  <servlet>
+  	<description>
+  	</description>
+  	<display-name>Manager</display-name>
+  	<servlet-name>Manager</servlet-name>
+  	<servlet-class>com.justintime.client.Manager</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>login</servlet-name>
   	<url-pattern>/rose</url-pattern>
@@ -140,5 +154,13 @@
   <servlet-mapping>
   	<servlet-name>Assign</servlet-name>
   	<url-pattern>/Assign</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Employee</servlet-name>
+  	<url-pattern>/Employee</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Manager</servlet-name>
+  	<url-pattern>/Manager</url-pattern>
   </servlet-mapping>
 </web-app>

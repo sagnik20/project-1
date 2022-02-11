@@ -83,6 +83,9 @@ public class BookingHistory extends HttpServlet {
 				+ "\r\n"
 				+ "\r\n"
 				+ "    <div class=\"bg-container\">");
+		out.println("<form method=\"post\" action=\"Employee\" >\r\n"
+				+ "<button type=\"submit\" id=\"login-button\" >Return to home</button>\r\n"
+				+ "</form>");
 		out.println("<form method=\"post\" action=\"bookcab\" >\r\n"
 				+ "<button type=\"submit\" id=\"login-button\" >Book a Cab</button>\r\n"
 				+ "</form>");
