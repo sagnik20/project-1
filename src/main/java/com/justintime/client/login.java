@@ -61,14 +61,16 @@ public class login extends HttpServlet {
 						+ "            <button class=\"btns\" type=\"submit\">Logout</button>\r\n"
 						+ "        </form>\r\n"
 						+ "\r\n"
-						+ "    </div>");
+						+ "    </div>"
+						+ "<div class=\"bg-container\">");
 				out.println("<form method=\"post\" action=\"bookcab\" >\r\n"
 						+ "<button type=\"submit\" id=\"login-button\" >Book a Cab</button>\r\n"
 						+ "</form>");
 				out.println("<form method=\"post\" action=\"BookingHistory\" >\r\n"
 						+ "<button type=\"submit\" id=\"login-button\" >Booking History</button>\r\n"
 						+ "</form>");
-				out.println("<div class=\"copyright-container\">\r\n"
+				out.println("</div>\r\n"
+						+"<div class=\"copyright-container\">\r\n"
 						+ "        <div class=\" d-flex flex-row justify-content-center\">\r\n"
 						+ "            <i class=\"fa fa-copyright icon\" aria-hidden=\"true\"></i>\r\n"
 						+ "            <p class=\"content ml-2\">Made with <b style=\"color: red;\">&#x2764;&#xfe0f;</b> by Sagnik.</p>\r\n"
@@ -80,7 +82,6 @@ public class login extends HttpServlet {
 //				rd.include(request, response);
 			}
 			else {
-				out.println("Wrong Credentials!");
 				RequestDispatcher rd=request.getRequestDispatcher("logiin.html");
 				rd.include(request, response);
 			}
@@ -118,17 +119,6 @@ public class login extends HttpServlet {
 				out.println("<form method=\"post\" action=\"PendingRequest\" >\r\n"
 						+ "<button type=\"submit\" id=\"login-button\" >Pending Request</button>\r\n"
 						+ "</form>");
-//				out.println("<center>\r\n"
-//						+ "    <table>\r\n"
-//						+ "        <thead>\r\n"
-//						+ "            <tr>\r\n"
-//						+ "                <th>Company</th>\r\n"
-//						+ "                <th>Contact</th>\r\n"
-//						+ "                <th>Country</th>\r\n"
-//						+ "            </tr>\r\n"
-//						+ "        </thead>\r\n"
-//						+ "        <tbody>");
-				
 				out.println("</div> \r\n"
 						+ "<div class=\"copyright-container\">\r\n"
 						+ "        <div class=\" d-flex flex-row justify-content-center\">\r\n"
@@ -142,7 +132,6 @@ public class login extends HttpServlet {
 //				rd.include(request, response);
 			}
 			else {
-				out.println("Wrong Credentials!");
 				RequestDispatcher rd=request.getRequestDispatcher("logiin.html");
 				rd.include(request, response);
 			}
@@ -150,7 +139,7 @@ public class login extends HttpServlet {
 		}
 		case 3:{
 			//Admin
-			if(email.equalsIgnoreCase("admin@emp.com") && pwd.equalsIgnoreCase("admin")) {
+			if(ValidateUser.checkMan(email, pwd)) {
 				HttpSession s=request.getSession(true);
 				s.setMaxInactiveInterval(10000);
 				s.setAttribute("id",email);
@@ -182,7 +171,8 @@ public class login extends HttpServlet {
 						+ "        <div class=\"select-container\">\r\n"
 						+ "            <a href=\"./EmployeeRegistration.html\"><button class=\"Button-admin\">Add Employee</button></a>\r\n"
 						+ "            <a href=\"./CabRegistration.html\"><button class=\"Button-admin\">Add Cab</button></a>\r\n"
-						+ "            <a href=\"#\"><button class=\"Button-admin\">Assign Cab</button></a>\r\n"
+						+ "            <form method=\"post\" action=\"AssignCab\" >\r\n\""
+						+ "            <button class=\"Button-admin\">Assign Cab</button></form>\r\n"
 						+ "        </div>\r\n"
 						+ "    </div>");
 				out.println("</div>");
@@ -198,7 +188,6 @@ public class login extends HttpServlet {
 //				rd.include(request, response);
 			}
 			else {
-				out.println("Wrong Credentials!");
 				RequestDispatcher rd=request.getRequestDispatcher("logiin.html");
 				rd.include(request, response);
 			}

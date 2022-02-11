@@ -34,5 +34,24 @@ public class RequestPendingDaoImpl implements RequestPendingDao {
 		return alist;
 	}
 
+	@Override
+	public List pendingRequest() {
+		Session session = HibernateCon.getSession().openSession();
+		List alist = null;
+		try {
+			SQLQuery q=session.createSQLQuery("select * from request as r where r.bid= 2"); //HQL
+			q.addEntity(Request.class);
+			alist = q.list();
+		} 
+		catch (HibernateException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		finally {
+			session.close();
+		}
+		return alist;
+	}
+
 	
 }

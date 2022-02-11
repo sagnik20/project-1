@@ -10,5 +10,6 @@ import com.justintime.model.Request;
  */
 public interface RequestPendingDao {
 	List cabRequest();
+	List pendingRequest();
 
 }
