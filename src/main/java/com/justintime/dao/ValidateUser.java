@@ -18,7 +18,7 @@ public class ValidateUser {
 			Session session = HibernateCon.getSession().openSession();
 			tx = session.beginTransaction();
 			
-			Query q=session.createQuery("from Employee e where e.email= :email and e.password= :pass")
+			Query q=session.createQuery("from Employee e where e.email= :email and e.password= :pass and e.manager=0")
 					.setParameter("email", email)
 					.setParameter("pass", pass); //HQL
 			elist=q.list();

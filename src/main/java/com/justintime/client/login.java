@@ -3,6 +3,7 @@ package com.justintime.client;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
+import java.util.logging.Logger;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -24,6 +25,7 @@ import com.justintime.model.Employee;
  */
 
 public class login extends HttpServlet {
+	private static final Logger logger = Logger.getLogger("login.class");
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html");
@@ -32,11 +34,13 @@ public class login extends HttpServlet {
 		String email=request.getParameter("id");
 		String pwd=request.getParameter("ipass");
 		Integer dropdown = Integer.parseInt(request.getParameter("dropdown"));
+		logger.info("within login.class file");
 		
 		switch(dropdown) {
 		case 1:{
 			//Employee   ValidateUser.check(id, pwd)
 			if(ValidateUser.check(email, pwd)) {
+				logger.info("Logged in as Employee");
 				HttpSession s=request.getSession(true);
 				s.setMaxInactiveInterval(10000);
 				s.setAttribute("email",email);
@@ -82,6 +86,7 @@ public class login extends HttpServlet {
 //				rd.include(request, response);
 			}
 			else {
+				logger.info("Wrong Employee Credentials!");
 				RequestDispatcher rd=request.getRequestDispatcher("logiin.html");
 				rd.include(request, response);
 			}
@@ -90,6 +95,7 @@ public class login extends HttpServlet {
 		case 2:{
 			//Manager
 			if(ValidateUser.checkMan(email, pwd)) {
+				logger.info("Manager logged in");
 				HttpSession s=request.getSession(true);
 				s.setMaxInactiveInterval(10000);
 				s.setAttribute("id",email);
@@ -132,6 +138,7 @@ public class login extends HttpServlet {
 //				rd.include(request, response);
 			}
 			else {
+				logger.info("Wrong Credentials of Manager");
 				RequestDispatcher rd=request.getRequestDispatcher("logiin.html");
 				rd.include(request, response);
 			}
@@ -140,6 +147,7 @@ public class login extends HttpServlet {
 		case 3:{
 			//Admin
 			if(ValidateUser.checkMan(email, pwd)) {
+				logger.info("Admin Logged In");
 				HttpSession s=request.getSession(true);
 				s.setMaxInactiveInterval(10000);
 				s.setAttribute("id",email);
@@ -188,6 +196,7 @@ public class login extends HttpServlet {
 //				rd.include(request, response);
 			}
 			else {
+				logger.info("Wrong Admin Credentials");
 				RequestDispatcher rd=request.getRequestDispatcher("logiin.html");
 				rd.include(request, response);
 			}

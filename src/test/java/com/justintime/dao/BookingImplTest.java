@@ -29,7 +29,7 @@ public class BookingImplTest {
 	@Test
 	public void testRequestCab() {
 		
-		assertEquals(false,b.requestCab());
+		assertEquals(true,b.requestCab());
 	}
 
 }

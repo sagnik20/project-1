@@ -39,8 +39,7 @@ public class BookingDetails {
 	 * @param cabNo
 	 * @param emp
 	 */
-	public BookingDetails(Integer bookingId, Cab cabNo, Employee emp) {
-		this.bookingId = bookingId;
+	public BookingDetails(Cab cabNo, Employee emp) {
 		this.cabNo = cabNo;
 		this.emp = emp;
 	}

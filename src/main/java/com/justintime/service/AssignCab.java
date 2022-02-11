@@ -134,7 +134,7 @@ public class AssignCab extends HttpServlet {
 			out.format("<td>%s</td>", b.getEmp().getName());
 			s.setAttribute("requestId", b.getRequestId());
 			out.format("<td>"
-					+"<form method=\"post\" action=\"accept\" >\r\n"
+					+"<form method=\"post\" action=\"Assign\" >\r\n"
 					+ "<button type=\"submit\" class=\"button button1\" >Assign</button>\r\n"
 					+ "</form>"
 					+"</td>");

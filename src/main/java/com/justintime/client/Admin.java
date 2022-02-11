@@ -2,6 +2,7 @@ package com.justintime.client;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.logging.Logger;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -17,6 +18,7 @@ import javax.servlet.http.HttpSession;
  * Servlet implementation class Admin
  */
 public class Admin extends HttpServlet {
+	private static final Logger logger = Logger.getLogger("Admin.class");
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
@@ -24,6 +26,8 @@ public class Admin extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
+		
+		logger.info("Within Admin Servlet in com.justintime.client");
 
 		HttpSession s=request.getSession(false);
 		s.getAttribute("id");

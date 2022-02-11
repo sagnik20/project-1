@@ -18,25 +18,28 @@ import com.justintime.model.Request;
 public class BookingImpl implements Booking{
 
 	public boolean requestCab() {
+
+		Session session = HibernateCon.getSession().openSession();
 		Transaction tx=null;
+		
 		try {
-			Session session = HibernateCon.getSession().openSession();
 			tx = session.beginTransaction();
 			BookingStatus b = new BookingStatus(1,"Requested");
 			for(Employee e : ValidateUser.elist) {
 			Request rq = new Request(e,b);
 			session.save(rq);
 			}
-
 			   
 			tx.commit();
-			session.close();
+			
 			return true;
 		} catch (HibernateException e) {
 			if (tx != null) {
                 tx.rollback();
             }
 			e.printStackTrace();
+		} finally {
+			session.close();
 		}
 		return false;
 	}

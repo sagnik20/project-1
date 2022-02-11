@@ -39,25 +39,63 @@ public class Cab {
 	public Cab() {}
 
 
+
+
+	/**
+	 * @return the cabNo
+	 */
 	public Integer getCabNo() {
 		return cabNo;
 	}
 
-
+	/**
+	 * @return the status
+	 */
 	public Integer getStatus() {
 		return status;
 	}
 
-
-	public String getDname() {
+	/**
+	 * @return the dName
+	 */
+	public String getdName() {
 		return dName;
 	}
 
-
-	public String getDmobile() {
+	/**
+	 * @return the dMobile
+	 */
+	public String getdMobile() {
 		return dMobile;
 	}
 
+	/**
+	 * @param cabNo the cabNo to set
+	 */
+	public void setCabNo(Integer cabNo) {
+		this.cabNo = cabNo;
+	}
+
+	/**
+	 * @param status the status to set
+	 */
+	public void setStatus(Integer status) {
+		this.status = status;
+	}
+
+	/**
+	 * @param dName the dName to set
+	 */
+	public void setdName(String dName) {
+		this.dName = dName;
+	}
+
+	/**
+	 * @param dMobile the dMobile to set
+	 */
+	public void setdMobile(String dMobile) {
+		this.dMobile = dMobile;
+	}
 
 	@Override
 	public int hashCode() {
