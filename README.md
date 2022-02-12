@@ -18,6 +18,7 @@ I was tasked with creating an Cab Booking system for a small company/group. This
 * Maven War Plugin - version 3.3.1
 * Apache Tomcat - version 9.0.58
 * MySQL Connector Java - version 8.0.25
+* Jakarta Servlet - version 6.0
 * Log 4j - version 1.2.17
 * JUnit - version 4
 * HTML - version 5
@@ -29,13 +30,16 @@ I was tasked with creating an Cab Booking system for a small company/group. This
 
 List of features ready and TODOs for future development
 * Adding New Employee by Admin
-* Putting a cab Request by Employee
+* Adding New Cab by Admin
+* Putting a Cab Request by Employee
 * See previous booking history of an Employee
-* Logout based on each 
+* Logout from on each page
+* A back button for each page
+* Accept/Reject an Cab request by Department Manager
 
 To-do list:
-* Manager functionalities
-* Designing the frontend of most of the pages.  
+* Design beautiful the frontend pages. 
+* Write Test Cases using JUnit
 
 ## Getting Started
    
@@ -46,17 +50,11 @@ git clone https://github.com/sagnik20/project-1.git
 ```
 Incase it doesn't work then make sure you have Git installed. If not then install it from [official website](https://git-scm.com/downloads)
 > Open this in Eclipse 
-
-
-> Be sure to include BOTH Windows and Unix command  
-> Be sure to mention if the commands only work on a specific platform (eg. AWS, GCP)
-
-- All the `code` required to get started
-- Images of what it should look like
+> Right click on the project -> Click on `Run as` -> Then `Run on Server`
 
 ## Usage
 
-> Here, you instruct other people on how to use your project after they’ve installed it. This would also be a good place to include screenshots of your project in action.
+> include screenshots of your project in action.
 
 
 ## License
