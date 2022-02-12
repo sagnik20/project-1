@@ -14,7 +14,7 @@ import com.justintime.model.BookingStatus;
 import com.justintime.model.Request;
 
 /**
- * @author sagni
+ * @author Sagnik
  *
  */
 public class AcceptRequestDao implements AcceptRequest {
@@ -35,7 +35,7 @@ public class AcceptRequestDao implements AcceptRequest {
 			session.flush();
 			tx.commit();
 			logger.info("Success in updating Booking Status to Accepted");
-		} catch (HibernateException e) {
+		} catch (Exception e) {
 			if(tx!=null)
 				tx.rollback();
 			logger.info("Couldn't update booking status");			

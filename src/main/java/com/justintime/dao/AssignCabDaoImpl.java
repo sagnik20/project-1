@@ -53,27 +53,35 @@ public class AssignCabDaoImpl implements AssignCabDao {
 			Iterator it = clist.iterator();
 			Iterator ite = rlist.iterator();
 			if(it.hasNext() && ite.hasNext()) {
+				
 				Cab c1 = (Cab) it.next();
 				Request r1 = (Request) ite.next();
 				
 				BookingDetails bd = new BookingDetails(c1,r1.getEmp());
 				BookingStatus bs = new BookingStatus(4,"Booked");
+				logger.info("Objects got created");
 				session.save(bd);
+				logger.info("Saved into booking details ");
 				c1.setStatus(0);
 				r1.setBookingId(bd);
 				r1.setbId(bs);
 				session.update(c1);
+				logger.info("updated cab's booking status");
 				session.update(r1);
+				logger.info("updated request table with booking id");
 				session.flush();
 			}
+			else {
+				return false;
+			}
 			tx.commit();
-			session.close();
 		} 
 		catch (HibernateException e) {
 			if(tx!=null) {
 				tx.rollback();
 			}
 			e.printStackTrace();
+			return false;
 		}
 		finally {
 			session.close();
