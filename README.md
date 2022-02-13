@@ -46,14 +46,16 @@ To-do list:
 
 ## Getting Started
    
-> Clone this Project using below command
+Clone this Project using below command
 
 ```
 git clone https://github.com/sagnik20/project-1.git
 ```
 Incase it doesn't work then make sure you have Git installed. If not then install it from [official website](https://git-scm.com/downloads)
-> Open this in Eclipse 
-> Right click on the project -> Click on `Run as` -> Then `Run on Server`
+
+Open this in [Eclipse IDE for Enterprise Java and Web Developers ](https://www.eclipse.org/downloads/packages/release/2021-12/r/eclipse-ide-enterprise-java-and-web-developers)
+
+Right click on the project -> Click on `Run as` -> Then `Run on Server`
 
 ## Usage
 
