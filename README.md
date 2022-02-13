@@ -59,8 +59,9 @@ Right click on the project -> Click on `Run as` -> Then `Run on Server`
 
 ## Usage
 
-> include screenshots of your project in action.
+#### Entity Relationship (ER) Diagram
 
+![ER Diagram](https://assets.digitalocean.com/articles/alligator/boo.svg "Project 1 ER Diagram")
 
 ## License
 
