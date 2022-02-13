@@ -1,5 +1,5 @@
 # Cab Booking System
-##### Cab Booking Web Application
+##### 🚀 Cab Booking Web Application
 
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/sagnik20/project-1/graphs/commit-activity) 
 [![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://GitHub.com/sagnik20/ama) 
@@ -10,7 +10,7 @@
 
 ## Project Description
 
-Cab Booking Web Application
+🚀 Cab Booking Web Application
 
 I was tasked with creating an Cab Booking system for a small company/group. This program will allow employees to book a cab . When their manager approve/deny they can optionally leave a message. An employee can login to add Cab booking request. Respective department Manager can view these requests and approve or deny them. Admin can view all booking details and provide the employees with a booking details. Also admin can add ,update and delete a caband employee deatils. Backend developed in Servlets,Hibernate , MySQL .Front end is implemented using Html5, CSS, Javascript .You need to implement Junit test cases , SonarLint, Jacoco for test covergae ,Log4j for recording log messages.!
 
