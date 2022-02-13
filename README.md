@@ -61,7 +61,7 @@ Right click on the project -> Click on `Run as` -> Then `Run on Server`
 
 #### Entity Relationship (ER) Diagram
 
-![ER Diagram](https://assets.digitalocean.com/articles/alligator/boo.svg "Project 1 ER Diagram")
+![ER Diagram](https://github.com/sagnik20/project-1/blob/main/Images/Project1-ER-Diagram-1.jpg "Project 1 ER Diagram")
 
 ## License
 
