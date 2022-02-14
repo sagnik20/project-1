@@ -11,23 +11,26 @@ import com.justintime.model.Employee;
 public class RegisterEmployeeImpl implements RegisterEmployee{
 
 	public Boolean register1(Employee emp) {
-		
+		Session session = HibernateCon.getSession().openSession();
+		Transaction  tx = null;
 		try {
-			Session session = HibernateCon.getSession().openSession();
-			Transaction tx = session.beginTransaction();
 			
-			session.save(emp);
-			
+			tx = session.beginTransaction();
+			if(emp!=null)
+				session.save(emp);
+			else
+				throw new Exception();
 			tx.commit();
-			session.close();
 			
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			if(tx!=null)
+				tx.rollback();
+			//e.printStackTrace();
 			return false;
+		}finally {
+			session.close();
 		}
-		
-		
+
 		return true;
 	}
 

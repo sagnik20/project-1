@@ -2,6 +2,7 @@ package com.justintime.service;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
@@ -37,6 +38,8 @@ public class AssignCab extends HttpServlet {
 		RequestPendingDao pr = new RequestPendingDaoImpl();
 		List lst = pr.pendingRequest();
 		
+		List gd = new ArrayList();
+		
 		out.println("<!DOCTYPE html>\r\n"
 				+ "<html lang=\"en\">\r\n"
 				+ "<head>\r\n"
@@ -44,6 +47,19 @@ public class AssignCab extends HttpServlet {
 				+ "    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r\n"
 				+ "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n"
 				+ "    <title>Pending Request</title>\r\n"
+				+ "<script>"
+				+ " var i=0;"
+				+ "document.addEventListener('DOMContentLoaded', function() {\r\n"
+				+ "    var button = document.createElement('button');\r\n"
+				+ "    button.type = 'submit';\r\n"
+				+ "    button.innerHTML = 'Assign';\r\n"
+				+ "    button.className = 'button button1';\r\n"
+				+ "    button.value = i++;\r\n"
+				+ "    button.name = \"acceptBtn\";"
+				+ "    var container = document.getElementById('frm');\r\n"
+				+ "    container.appendChild(button);\r\n"
+				+ "}, false);"
+				+ "</script>"
 				+ "    <style>\r\n"
 				+ "        table {\r\n"
 				+ "          border-collapse: collapse;\r\n"
@@ -135,14 +151,14 @@ public class AssignCab extends HttpServlet {
 			out.format("<td>"+b.getRequestId()+"</td>");
 			out.format("<td>%s</td>", b.getEmp().getId());
 			out.format("<td>%s</td>", b.getEmp().getName());
-			s.setAttribute("requestId", b.getRequestId());
+			gd.add(b.getRequestId());
 			out.format("<td>"
-					+"<form method=\"post\" action=\"Assign\" >\r\n"
-					+ "<button type=\"submit\" class=\"button button1\" >Assign</button>\r\n"
+					+"<form method=\"post\" action=\"Assign\" id=\"frm\">\r\n"
 					+ "</form>"
 					+"</td>");
 			out.println("            <tr>");
 		}
+		s.setAttribute("requestId", gd);
 		out.println("        </tbody>\r\n"
 				+ "    </table>\r\n"
 				+ "    </center>");
