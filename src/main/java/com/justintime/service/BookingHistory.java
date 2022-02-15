@@ -95,6 +95,8 @@ public class BookingHistory extends HttpServlet {
 				+ "            <tr>\r\n"
 				+ "                <th>Booking Id</th>\r\n"
 				+ "                <th>Cab No</th>\r\n"
+				+ "                <th>Driver Name</th>\r\n"
+				+ "                <th>Mobile No</th>\r\n"
 				+ "            </tr>\r\n"
 				+ "        </thead>\r\n"
 				+ "        <tbody>");
@@ -102,7 +104,9 @@ public class BookingHistory extends HttpServlet {
 			BookingDetails b = (BookingDetails) iterator.next();
 			out.println("            <tr>");
 			out.format("<td>"+b.getBookingId()+"</td>");
-			out.format("<td>%s</td>", b.getCabNo());
+			out.format("<td>%s</td>", b.getCabNo().getCabNo());
+			out.format("<td>%s</td>", b.getCabNo().getdName());
+			out.format("<td>%s</td>", b.getCabNo().getdMobile());
 			out.println("            <tr>");
 		}
 		out.println("        </tbody>\r\n"

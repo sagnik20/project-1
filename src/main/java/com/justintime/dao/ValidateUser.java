@@ -11,6 +11,7 @@ import com.justintime.model.Employee;
 
 public class ValidateUser {
 	public static List<Employee> elist =null;
+	
 	public static boolean check(String email,String pass) {
 		boolean  st = false;
 		Transaction tx =null;

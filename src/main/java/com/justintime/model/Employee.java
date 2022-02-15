@@ -112,7 +112,39 @@ public class Employee {
 	public void setManager(Integer manager) {
 		this.manager = manager;
 	}
-		
+
+	/**
+	 * @param name the name to set
+	 */
+	public void setName(String name) {
+		this.name = name;
+	}
+	/**
+	 * @param email the email to set
+	 */
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	/**
+	 * @param active the active to set
+	 */
+	public void setActive(Integer active) {
+		this.active = active;
+	}
+	/**
+	 * @param dept the dept to set
+	 */
+	public void setDept(String dept) {
+		this.dept = dept;
+	}
+	/**
+	 * @param password the password to set
+	 */
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	
+	
 	
 
 }

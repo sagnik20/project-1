@@ -33,6 +33,16 @@ public class RegisterEmployeeTest {
 	@Test
 	public void testRegister1() {
 		assertEquals(false,em.register1(emp));
+		emp.setName("Apurb");
+		assertEquals("Apurb",emp.getName());
+		emp.setActive(1);
+		emp.setDept("ABC");
+		assertEquals("ABC",emp.getDept());
+		emp.setEmail("apurb@emp.com");
+		assertEquals("apurb@emp.com",emp.getEmail());
+		emp.setPassword("Apurb @#$");
+		assertEquals("Apurb @#$",emp.getPassword());
+		assertEquals(1,emp.getActive());
 	}
 
 }
