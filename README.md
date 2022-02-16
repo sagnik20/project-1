@@ -83,6 +83,16 @@ Right click on the project -> Click on `Run as` -> Then `Run on Server`
 
 ***
 
+#### Admin Page
+
+![Admin Login Page](https://github.com/sagnik20/project-1/blob/main/Images/admin-login.png "Project 1 Admin Page after Login")
+
+***
+
+#### Employee Booking History
+
+![Employee Booking History Page](https://github.com/sagnik20/project-1/blob/main/Images/bookinf%20History%20of%20Employee.png "Project 1 Employee Booking History")
+
 ## License
 
 This project uses the following license: [MIT-License](<https://github.com/sagnik20/project-1/blob/main/LICENSE>).
