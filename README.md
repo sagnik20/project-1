@@ -63,6 +63,26 @@ Right click on the project -> Click on `Run as` -> Then `Run on Server`
 
 ![ER Diagram](https://github.com/sagnik20/project-1/blob/main/Images/Project1-ER-Diagram-1.jpg "Project 1 ER Diagram")
 
+***
+
+#### Login Page
+
+![Login Page](https://github.com/sagnik20/project-1/blob/main/Images/login-page.png "Project 1 Login Page")
+
+***
+
+#### Employee Page
+
+![Employee Page](https://github.com/sagnik20/project-1/blob/main/Images/after-employee-login.png "Project 1 Employee Page after Login")
+
+***
+
+#### Manager Page
+
+![Manager Login Page](https://github.com/sagnik20/project-1/blob/main/Images/manager-page.png "Project 1 Manager Page after Login")
+
+***
+
 ## License
 
 This project uses the following license: [MIT-License](<https://github.com/sagnik20/project-1/blob/main/LICENSE>).
